@@ -1,0 +1,24 @@
+{
+  "name": "jsonresume-theme-fullmoon",
+  "version": "0.1.1",
+  "description": "Fullmoon theme for JSON Resume",
+  "author": "iLya Filimonov <https://ilyafilimonov.com/>",
+  "homepage": "https://github.com/IsFilimonov/jsonresume-theme-fullmoon#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "moment": "^2.19.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsFilimonov/jsonresume-theme-fullmoon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IsFilimonov/jsonresume-theme-fullmoon/issues"
+  },
+  "scripts": {
+    "test": "node tests/main.js"
+  }
+}
