@@ -172,6 +172,18 @@ h1 {
   font-size: 2rem;
 }
 
+h1 a {
+  display: inline;
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: "freight-sans-pro", lato, sans-serif;
+  vertical-align: middle;
+}
+
+h1 a:hover {
+  cursor: pointer;
+}
+
 h2 {
   font-size: 1.67rem;
 }
@@ -218,8 +230,8 @@ section .location {
   padding: 0;
 }
 
-#header > #profiles,
-#header > #contact,
+#header>#profiles,
+#header>#contact,
 #skills,
 #languages,
 #interests {
@@ -230,21 +242,21 @@ section .location {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
-#header > div {
+#header>div {
   line-height: 1.5;
 }
 
-#header > div > div {
+#header>div>div {
   margin-right: 1.2em;
 }
 
 #header h1.name {
   font-size: 2.8rem;
-  font-weight: 700;  // bold
+  font-weight: 700;
   line-height: 100%;
 }
 
@@ -263,7 +275,7 @@ section .location {
 .main-summary {
   background: #f1f8ff;
   padding: 1.2em 1em;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .main-summary p {
@@ -281,7 +293,7 @@ section .location {
   font-size: 0.9rem;
 }
 
-.section > header {
+.section>header {
   position: relative;
 }
 
@@ -289,7 +301,7 @@ section .location {
   margin-right: 0.25em;
 }
 
-.section > header::after {
+.section>header::after {
   position: absolute;
   left: 0;
   top: 0.7em;
@@ -301,21 +313,21 @@ section .location {
   display: block;
 }
 
-.section.main-summary > section {
+.section.main-summary>section {
   margin: 0;
 }
 
-.section > section > header {
+.section>section>header {
   font-size: 1.38rem;
   position: relative;
   margin-top: 0.7em;
 }
 
-.section > section > header:first-of-type {
+.section>section>header:first-of-type {
   margin: 0;
 }
 
-.section > section > header .space-left {
+.section>section>header .space-left {
   position: absolute;
   left: -1.56rem;
   top: 5px;
@@ -407,7 +419,7 @@ section .location {
   margin: 1em 0 0 0;
 }
 
-.highlights > li > p {
+.highlights>li>p {
   margin-bottom: 0.5em;
 }
 
@@ -582,7 +594,7 @@ section .location {
   display: none;
 }
 
-.section > section > section {
+.section>section>section {
   margin-bottom: 0.5rem;
 }
 
@@ -610,6 +622,7 @@ section .location {
     width: 80%;
     margin: 0 auto;
   }
+
   .section header .date {
     float: right;
     font-weight: 600;
@@ -625,27 +638,34 @@ section .location {
   li {
     margin-left: 1.5em;
   }
+
   #resume {
     width: 820px;
     margin: 2rem auto;
   }
-  .section > section > header .space-left {
+
+  .section>section>header .space-left {
     opacity: 1;
     cursor: pointer;
   }
-  .section > section:not(.main-summary) {
+
+  .section>section:not(.main-summary) {
     margin-left: 1.67rem;
   }
+
   .toggle-item {
     transform: translate(-9999px);
   }
-  .toggle-item + label {
+
+  .toggle-item+label {
     display: block;
   }
-  .toggle-item:checked + label:after {
+
+  .toggle-item:checked+label:after {
     content: "\f0d7";
   }
-  .toggle-item + label:after {
+
+  .toggle-item+label:after {
     float: left;
     cursor: pointer;
     margin-left: -20px;
@@ -655,15 +675,18 @@ section .location {
     font-family: "Font Awesome 5 Free";
     content: "\f0da";
   }
-  .toggle-item ~ .item {
+
+  .toggle-item~.item {
     height: 0;
     opacity: 0;
   }
-  .toggle-item:checked ~ .item {
+
+  .toggle-item:checked~.item {
     height: auto;
     opacity: 1;
     transition: all 0.5s linear;
   }
+
   .company::before,
   .roles::before,
   .area::before,
@@ -672,26 +695,31 @@ section .location {
   .awarder::before {
     content: "| ";
   }
+
   .header-left {
     float: left;
     width: 70%;
     word-break: normal;
   }
+
   .section header .date {
     padding: 0.2em;
   }
+
   .display {
     display: none;
   }
+
   .display:not(.none) {
     display: block;
   }
 }
 
 @media print {
-  a:not(.hide-href-print)::after{
+  a:not(.hide-href-print)::after {
     content: " (" attr(href) ") ";
   }
+
   #resume {
     margin: 0.1em;
     padding: 0.1em;
@@ -699,54 +727,69 @@ section .location {
     word-wrap: break-word;
     line-height: 1.25;
   }
+
   @page {
     margin: 1cm 1.4cm;
   }
+
   .item-count {
     display: none;
   }
+
   .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: "at ";
   }
+
   .roles::before {
     content: "as "
   }
+
   .main-summary {
     padding: 0;
     background: transparent;
   }
+
   .section {
     margin: 0.8rem 0;
     padding: 0;
   }
+
   .section header {
     padding-bottom: 0.15rem;
   }
+
   .section .location {
     padding-bottom: 0.15rem;
   }
-  .section > section > section {
+
+  .section>section>section {
     margin: 0 0 1em 0;
   }
-  .section > section > section:last-of-type {
+
+  .section>section>section:last-of-type {
     margin: 0;
   }
+
   .stack-overflow::after {
     content: "";
   }
+
   .fa.social {
     color: #828386;
   }
+
   ul {
     margin-top: 0.4em;
   }
+
   ul,
   li {
     padding: 0;
   }
+
   ul.keywords li,
   ul.courses li {
     margin: 0;
@@ -754,54 +797,68 @@ section .location {
     font-size: 0.8rem;
     background: transparent;
   }
+
   ul.keywords li::after,
   ul.courses li::after {
     padding: 0 0 0 0.1rem;
     content: " |";
   }
+
   ul.keywords::before,
   ul.courses::before {
     font-size: 0.8rem;
     font-weight: 600;
   }
+
   #skills .item {
     width: calc(100% / 3);
     padding: 0;
   }
+
   .highlights {
     margin: 0.5em 0 0 0;
   }
+
   ul.keywords::before {
     content: "Skills acquired: ";
   }
+
   #skills .keywords::before {
     content: none;
   }
+
   .section p {
     margin: 0;
     padding: 0;
   }
+
   ul.courses::before {
     content: "Major courses: ";
   }
+
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {
     content: "";
   }
+
   .level em {
     font-style: normal;
     padding: 0.1em 0;
   }
+
   .level .bar {
     display: none;
   }
+
   #profiles .item {
     padding: 0;
   }
+
   .item.display {
     display: block;
     opacity: 1 !important;
   }
+
   .fa-map-marker-alt:before {
     padding-left: 0.1em;
   }
